@@ -4,3 +4,6 @@
 
 - include_role:
     name: dt-operator
+
+- include_role:
+    name: app-unguard
