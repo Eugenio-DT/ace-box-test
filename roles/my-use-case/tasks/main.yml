@@ -7,3 +7,6 @@
 
 - include_role:
     name: app-unguard
+
+- include_role:
+    name: app-easytrade
