@@ -11,5 +11,5 @@
 - include_role:
     name: app-easytravel
 
--include_role:
+- include_role:
     name: app-hipstershop
