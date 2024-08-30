@@ -9,4 +9,7 @@
     name: app-unguard
 
 - include_role:
-    name: app-easytrade
+    name: app-easytravel
+
+-include_role:
+    name: app-hipstershop
