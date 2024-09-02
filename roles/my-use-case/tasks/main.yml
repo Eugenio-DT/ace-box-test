@@ -12,4 +12,10 @@
     name: app-easytravel
 
 - include_role:
+    name: app-easytrade
+
+- include_role:
     name: app-hipstershop
+
+- include_role:
+    name: app-simplenode
