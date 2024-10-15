@@ -1,7 +1,7 @@
 ---
 
 - debug:
-    msg: "Hello from {{ ace-box-test-eugenio }}!"
+    msg: "Hello from ace-box-test-eugenio!"
 
 # - include_role:
 #     name: dt-access-token
