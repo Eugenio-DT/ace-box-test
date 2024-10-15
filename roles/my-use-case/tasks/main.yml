@@ -57,17 +57,17 @@
 #       DT_OAUTH_SSO_ENDPOINT: "{{ extra_vars.dt_oauth_sso_endpoint }}"
 #       INGRESS_DOMAIN: "{{ ingress_domain }}"
 
-- include_role:
-    name: microk8s
+# - include_role:
+#     name: microk8s
 
-- include_role:
-    name: dt-operator
+# - include_role:
+#     name: dt-operator
 
 # - include_role:
 #     name: app-unguard
 
-- include_role:
-    name: easytrade
+# - include_role:
+#     name: easytrade
 
 # # Include and template use case specific values before installing Dashboard
 # - set_fact:
