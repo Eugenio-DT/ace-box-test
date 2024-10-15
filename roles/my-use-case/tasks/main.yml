@@ -3,59 +3,59 @@
 - debug:
     msg: "Hello from {{ ace-box-test-eugenio }}!"
 
-- include_role:
-    name: dt-access-token
-  vars:
-    access_token_var_name: "monaco_api_token"
-    access_token_scope:
-      [
-        "CaptureRequestData",
-        "credentialVault.read",
-        "credentialVault.write",
-        "DataExport",
-        "DataPrivacy",
-        "ReadConfig",
-        "WriteConfig",
-        "events.ingest",
-        "settings.read",
-        "settings.write",
-        "metrics.ingest",
-        "logs.ingest"
-      ]
+# - include_role:
+#     name: dt-access-token
+#   vars:
+#     access_token_var_name: "monaco_api_token"
+#     access_token_scope:
+#       [
+#         "CaptureRequestData",
+#         "credentialVault.read",
+#         "credentialVault.write",
+#         "DataExport",
+#         "DataPrivacy",
+#         "ReadConfig",
+#         "WriteConfig",
+#         "events.ingest",
+#         "settings.read",
+#         "settings.write",
+#         "metrics.ingest",
+#         "logs.ingest"
+#       ]
 
-- include_role:
-    name: dt-platform
-    tasks_from: ensure-app
-  vars:
-    dt_app_id: "{{ item.dt_app_id }}"
-    dt_environment_url_gen3: "{{ extra_vars.dt_environment_url_gen3 }}"
-    dt_oauth_sso_endpoint: "{{ extra_vars.dt_oauth_sso_endpoint }}"
-    dt_oauth_client_id: "{{ extra_vars.dt_oauth_client_id }}"
-    dt_oauth_client_secret: "{{ extra_vars.dt_oauth_client_secret }}"
-    dt_oauth_account_urn: "{{ extra_vars.dt_oauth_account_urn }}"
-  loop:
-    - dt_app_id: "dynatrace.slack"
-      dt_app_version: "1.3.1"
-    - dt_app_id: "dynatrace.gitlab.connector"
-      dt_app_version: "0.2.2"
-    - dt_app_id: "dynatrace.jira"
-      dt_app_version: "4.0.0"
-    - dt_app_id: "dynatrace.msteams"
-      dt_app_version: "1.0.1"
+# - include_role:
+#     name: dt-platform
+#     tasks_from: ensure-app
+#   vars:
+#     dt_app_id: "{{ item.dt_app_id }}"
+#     dt_environment_url_gen3: "{{ extra_vars.dt_environment_url_gen3 }}"
+#     dt_oauth_sso_endpoint: "{{ extra_vars.dt_oauth_sso_endpoint }}"
+#     dt_oauth_client_id: "{{ extra_vars.dt_oauth_client_id }}"
+#     dt_oauth_client_secret: "{{ extra_vars.dt_oauth_client_secret }}"
+#     dt_oauth_account_urn: "{{ extra_vars.dt_oauth_account_urn }}"
+#   loop:
+#     - dt_app_id: "dynatrace.slack"
+#       dt_app_version: "1.3.1"
+#     - dt_app_id: "dynatrace.gitlab.connector"
+#       dt_app_version: "0.2.2"
+#     - dt_app_id: "dynatrace.jira"
+#       dt_app_version: "4.0.0"
+#     - dt_app_id: "dynatrace.msteams"
+#       dt_app_version: "1.0.1"
 
-- include_role:
-    name: monaco-v2
-  vars:
-    monaco_projects_root: "{{role_path_abs}}/files/monaco"  # monaco projects root folder path
-    monaco_project: "deploy" # selection of projects or all projects under the root path if set empty
-    monaco_manifest_path: "{{role_path_abs}}/files/monaco/manifest.yaml"
-    monaco_environment:
-      DT_API_TOKEN: "{{ monaco_cleanup_api_token }}"
-      DT_PLATFORM_TENANT_URL: "{{ extra_vars.dt_environment_url_gen3 }}"
-      DT_OAUTH_CLIENT_ID: "{{ extra_vars.dt_oauth_client_id }}"
-      DT_OAUTH_CLIENT_SECRET: "{{ extra_vars.dt_oauth_client_secret }}"
-      DT_OAUTH_SSO_ENDPOINT: "{{ extra_vars.dt_oauth_sso_endpoint }}"
-      INGRESS_DOMAIN: "{{ ingress_domain }}"
+# - include_role:
+#     name: monaco-v2
+#   vars:
+#     monaco_projects_root: "{{role_path_abs}}/files/monaco"  # monaco projects root folder path
+#     monaco_project: "deploy" # selection of projects or all projects under the root path if set empty
+#     monaco_manifest_path: "{{role_path_abs}}/files/monaco/manifest.yaml"
+#     monaco_environment:
+#       DT_API_TOKEN: "{{ monaco_cleanup_api_token }}"
+#       DT_PLATFORM_TENANT_URL: "{{ extra_vars.dt_environment_url_gen3 }}"
+#       DT_OAUTH_CLIENT_ID: "{{ extra_vars.dt_oauth_client_id }}"
+#       DT_OAUTH_CLIENT_SECRET: "{{ extra_vars.dt_oauth_client_secret }}"
+#       DT_OAUTH_SSO_ENDPOINT: "{{ extra_vars.dt_oauth_sso_endpoint }}"
+#       INGRESS_DOMAIN: "{{ ingress_domain }}"
 
 - include_role:
     name: microk8s
