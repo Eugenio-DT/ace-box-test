@@ -10,7 +10,7 @@ configs:
         configType: app:dynatrace.jira:connection
         property: id
         type: reference
-    template: 4f4fb22d-abd0-4209-9e64-5c01f2fc525c.json
+    template: jira-issue-for-vulnerabilities.json
     skip: false
     originObjectId: 4f4fb22d-abd0-4209-9e64-5c01f2fc525c
   type:
@@ -22,7 +22,7 @@ configs:
     name:
       type: value
       value: Account Enumeration Simulation
-    template: 628eed0b-63d4-47e4-83c8-7366d94de26f.json
+    template: account-enumeration-simulation.json
     skip: false
   type:
     automation:

@@ -2,7 +2,7 @@ configs:
 - id: 525d4023-de8f-306b-bb0c-3d76ee3b6452
   config:
     name: my.jira.connection.generic
-    template: 525d4023-de8f-306b-bb0c-3d76ee3b6452.json
+    template: jira-connection.json
     skip: false
   type:
     settings:
