@@ -6,10 +6,11 @@ configs:
       value: Jira Issue for Vulnerabilities
     parameters:
       appdynatracejiraconnection__525d4023de8f306bbb0c3d76ee3b6452__id:
-        configId: 525d4023-de8f-306b-bb0c-3d76ee3b6452
+        configId: my.jira.connection.generic
         configType: app:dynatrace.jira:connection
         property: id
         type: reference
+        project: appdynatrace.jiraconnection
     template: jira-issue-for-vulnerabilities.json
     skip: false
     originObjectId: 4f4fb22d-abd0-4209-9e64-5c01f2fc525c

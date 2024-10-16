@@ -1,5 +1,5 @@
 configs:
-- id: 525d4023-de8f-306b-bb0c-3d76ee3b6452
+- id: my.jira.connection.generic
   config:
     name: my.jira.connection.generic
     template: jira-connection.json
