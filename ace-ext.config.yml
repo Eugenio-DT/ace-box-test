@@ -1,3 +1,5 @@
 ---
 # Default overrides
-my_var_override: foobar
+dashboard_password: supersecret
+apply_monaco_easytrade: true
+apply_monaco_unguard: true

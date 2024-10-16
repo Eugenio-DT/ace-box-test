@@ -1,0 +1,6 @@
+{
+    "allowedOutboundConnections": {
+        "enforced": false,
+        "hostList": []
+    }
+}

@@ -1,10 +1,13 @@
-manifestVersion: "1.0"
+manifestVersion: 1.0
 projects:
-- name: deploy
+  - name: outbound-connection
+  - name: builtinappsec.runtime-vulnerability-detection
+  - name: appdynatrace.jiraconnection
+  - name: workflow
 environmentGroups:
-- name: default
+- name: development
   environments:
-      - name: perform
+      - name: dev
         url:
           type: environment
           value: DT_PLATFORM_TENANT_URL
