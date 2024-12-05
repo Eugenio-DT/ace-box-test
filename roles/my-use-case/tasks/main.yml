@@ -4,11 +4,11 @@
 # #### Validate vars ###
 # ######################
 
-- include_role:
-    name: k3s
+# - include_role:
+#     name: k3s
 
-- include_role:
-    name: dt-operator
+# - include_role:
+#     name: dt-operator
 
 # - include_role:
 #     name: app-unguard
