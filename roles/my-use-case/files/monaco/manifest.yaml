@@ -1,9 +1,10 @@
 manifestVersion: 1.0
 projects:
-  - name: outbound-connection
-  - name: builtinappsec.runtime-vulnerability-detection
-  - name: appdynatrace.jiraconnection
-  - name: workflow
+  # - name: outbound-connection
+  # - name: builtinappsec.runtime-vulnerability-detection
+  # - name: appdynatrace.jiraconnection
+  # - name: workflow
+  - name: deploy
 environmentGroups:
 - name: development
   environments:
